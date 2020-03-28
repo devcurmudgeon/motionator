@@ -9,18 +9,14 @@ import ARKit
 import SceneKit
 
 enum VirtualContentType: Int {
-    case transforms, texture, geometry, videoTexture, blendShape
+    case transforms, geometry, blendShape
     
     func makeController() -> VirtualContentController {
         switch self {
         case .transforms:
             return TransformVisualization()
-        case .texture:
-            return TexturedFace()
         case .geometry:
-            return FaceOcclusionOverlay()
-        case .videoTexture:
-            return VideoTexturedFace()
+            return TexturedFace()
         case .blendShape:
             return BlendShapeCharacter()
         }
