@@ -15,31 +15,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E6c-py-dvH" customClass="ARSCNView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                            </sceneKitView>
                             <tabBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="d27-hx-eNe">
-                                <rect key="frame" x="0.0" y="729" width="375" height="83"/>
+                                <rect key="frame" x="0.0" y="729" width="375" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="tO8-2Q-yR7"/>
+                                </constraints>
                                 <items>
-                                    <tabBarItem title="Transforms" image="transforms" id="E1z-NA-Fpn"/>
-                                    <tabBarItem tag="1" title="Texture" image="texture" id="ojh-No-ZFu"/>
+                                    <tabBarItem title="Pre-Roll" image="stopwatch.fill" catalog="system" id="E1z-NA-Fpn"/>
+                                    <tabBarItem tag="1" title="Texture" image="videoTexture" id="ojh-No-ZFu"/>
                                     <tabBarItem tag="2" title="Blend Shapes" image="blendShapes" id="zTx-ta-V3U"/>
                                 </items>
                                 <connections>
                                     <outlet property="delegate" destination="BV1-FR-VrT" id="DBZ-Ne-uk1"/>
                                 </connections>
                             </tabBar>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E6c-py-dvH" customClass="ARSCNView">
+                                <rect key="frame" x="0.0" y="-13" width="375" height="721"/>
+                            </sceneKitView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="E6c-py-dvH" secondAttribute="bottom" id="4Ch-Kb-0fx"/>
-                            <constraint firstItem="E6c-py-dvH" firstAttribute="trailing" secondItem="d27-hx-eNe" secondAttribute="trailing" id="7sF-as-KLl"/>
-                            <constraint firstAttribute="trailing" secondItem="d27-hx-eNe" secondAttribute="trailing" id="AG4-v4-dES"/>
-                            <constraint firstItem="d27-hx-eNe" firstAttribute="bottom" secondItem="RLh-bf-1c3" secondAttribute="bottom" symbolic="YES" id="gEr-ol-2EN"/>
-                            <constraint firstItem="E6c-py-dvH" firstAttribute="leading" secondItem="d27-hx-eNe" secondAttribute="leading" id="rlX-It-0G6"/>
-                            <constraint firstItem="d27-hx-eNe" firstAttribute="leading" secondItem="GBj-4O-Whc" secondAttribute="leading" id="txU-4e-gMI"/>
-                            <constraint firstItem="E6c-py-dvH" firstAttribute="top" secondItem="RLh-bf-1c3" secondAttribute="top" id="yHv-rs-Wlk"/>
+                            <constraint firstItem="d27-hx-eNe" firstAttribute="leading" secondItem="RLh-bf-1c3" secondAttribute="leading" id="BfJ-PB-Hig"/>
+                            <constraint firstItem="d27-hx-eNe" firstAttribute="bottom" secondItem="GBj-4O-Whc" secondAttribute="bottom" id="KAP-Lj-aU5"/>
+                            <constraint firstItem="d27-hx-eNe" firstAttribute="top" secondItem="E6c-py-dvH" secondAttribute="bottom" constant="21" id="M9L-DA-8O6"/>
+                            <constraint firstAttribute="trailing" secondItem="d27-hx-eNe" secondAttribute="trailing" id="Sig-62-Ihf"/>
+                            <constraint firstItem="E6c-py-dvH" firstAttribute="trailing" secondItem="d27-hx-eNe" secondAttribute="trailing" id="da2-li-4mh"/>
+                            <constraint firstItem="E6c-py-dvH" firstAttribute="leading" secondItem="d27-hx-eNe" secondAttribute="leading" id="ewq-I0-Reb"/>
+                            <constraint firstItem="E6c-py-dvH" firstAttribute="top" secondItem="RLh-bf-1c3" secondAttribute="topMargin" constant="-57" id="tO6-MM-AK1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GBj-4O-Whc"/>
                     </view>
@@ -96,7 +99,7 @@ Shipping apps must support devices without face tracking. In your app, offer UI 
     </scenes>
     <resources>
         <image name="blendShapes" width="28" height="28"/>
-        <image name="texture" width="28" height="28"/>
-        <image name="transforms" width="28" height="28"/>
+        <image name="stopwatch.fill" catalog="system" width="121" height="128"/>
+        <image name="videoTexture" width="28" height="28"/>
     </resources>
 </document>
