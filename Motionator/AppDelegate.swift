@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
              it replaces the AR view (the initial storyboard in the view controller) with
              an alternate view controller containing a static error message.
              */
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let storyboard = UIStoryboard(name: "FaceCapture", bundle: nil)
             window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "unsupportedDeviceMessage")
         }
         return true
