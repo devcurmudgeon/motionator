@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		11012C161F3D07BC0099F3A4 /* BlendShapeCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11012C151F3D07BC0099F3A4 /* BlendShapeCharacter.swift */; };
 		116FDD742130A6BD008404D3 /* TransformVisualization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116FDD732130A6BD008404D3 /* TransformVisualization.swift */; };
 		11EE23D2213479CF00C0DEAD /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EE23D1213479CF00C0DEAD /* Utilities.swift */; };
+		121E32A92433ACCB004F1038 /* F53OSC in Frameworks */ = {isa = PBXBuildFile; productRef = 121E32A82433ACCB004F1038 /* F53OSC */; };
 		121FB4CB24321AC20049A681 /* BodyCapture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 121FB4CA24321AC20049A681 /* BodyCapture.storyboard */; };
 		121FB4CD24321B670049A681 /* BodyCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121FB4CC24321B670049A681 /* BodyCaptureView.swift */; };
 		3929C48C1E89EC2C00E00B60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3929C48B1E89EC2C00E00B60 /* AppDelegate.swift */; };
@@ -49,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				121E32A92433ACCB004F1038 /* F53OSC in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +146,9 @@
 			dependencies = (
 			);
 			name = Motionator;
+			packageProductDependencies = (
+				121E32A82433ACCB004F1038 /* F53OSC */,
+			);
 			productName = Motionator;
 			productReference = 3929C4881E89EC2C00E00B60 /* Motionator.app */;
 			productType = "com.apple.product-type.application";
@@ -175,6 +180,9 @@
 				Base,
 			);
 			mainGroup = 3929C47F1E89EC2C00E00B60;
+			packageReferences = (
+				121E32A72433ACCB004F1038 /* XCRemoteSwiftPackageReference "F53OSC" */,
+			);
 			productRefGroup = 3929C4891E89EC2C00E00B60 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -356,7 +364,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CAV2B3363L;
 				INFOPLIST_FILE = "$(SRCROOT)/Motionator/Resources/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.devcurmudgeon.Motionator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -375,7 +386,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CAV2B3363L;
 				INFOPLIST_FILE = "$(SRCROOT)/Motionator/Resources/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.devcurmudgeon.Motionator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -406,6 +420,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		121E32A72433ACCB004F1038 /* XCRemoteSwiftPackageReference "F53OSC" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pixlwave/F53OSC";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		121E32A82433ACCB004F1038 /* F53OSC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 121E32A72433ACCB004F1038 /* XCRemoteSwiftPackageReference "F53OSC" */;
+			productName = F53OSC;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3929C4801E89EC2C00E00B60 /* Project object */;
 }

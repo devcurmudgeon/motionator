@@ -8,6 +8,7 @@ A simple cartoon character animated using ARKit blend shapes.
 import Foundation
 import SceneKit
 import ARKit
+import F53OSC
 
 /// - Tag: BlendShapeCharacter
 class BlendShapeCharacter: NSObject, VirtualContentController {
@@ -46,5 +47,14 @@ class BlendShapeCharacter: NSObject, VirtualContentController {
         eyeLeftNode.scale.z = 1 - eyeBlinkLeft
         eyeRightNode.scale.z = 1 - eyeBlinkRight
         jawNode.position.y = originalJawY - jawHeight * jawOpen
+
+        let oscClient = F53OSCClient.init()
+        oscClient.host = "192.168.86.160"
+        oscClient.port = 10115
+
+        let message = F53OSCMessage(addressPattern: "/blender", arguments: [jawOpen, eyeBlinkLeft, eyeBlinkRight])
+        oscClient.send(message)
+         
+        print(message)
     }
 }

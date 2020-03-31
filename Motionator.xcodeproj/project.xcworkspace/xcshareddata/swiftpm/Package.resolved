@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "F53OSC",
+        "repositoryURL": "https://github.com/pixlwave/F53OSC",
+        "state": {
+          "branch": "master",
+          "revision": "3b3da3892deaf68aa81a001c0ad0d09948546d1f",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
