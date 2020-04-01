@@ -7,6 +7,7 @@ Displays the 3D face mesh geometry provided by ARKit, with a static texture.
 
 import ARKit
 import SceneKit
+import F53OSC
 
 class TexturedFace: NSObject, VirtualContentController {
 
@@ -38,6 +39,31 @@ class TexturedFace: NSObject, VirtualContentController {
             else { return }
         
         faceGeometry.update(from: faceAnchor.geometry)
-    }
 
+        let transform = faceAnchor.transform
+        let sceneView = renderer as! ARSCNView
+        let frame = sceneView.session.currentFrame
+
+        let proj = frame!.camera.projectionMatrix
+        let view = frame!.camera.viewMatrix(for: UIInterfaceOrientation.portrait)
+        let proj_view = simd_mul(proj, view)
+        let mvp = simd_mul(proj_view, transform)
+        let faceMatrix = SCNMatrix4(mvp)
+        let faceNode = SCNNode()
+        faceNode.setWorldTransform(faceMatrix)
+        let euler = faceNode.eulerAngles
+
+        let oscClient = F53OSCClient.init()
+        oscClient.host = "192.168.86.160"
+        oscClient.port = 9001
+
+
+        let msg = F53OSCMessage(addressPattern: "/head", arguments: [euler.x, 3.14 - euler.z, euler.y])
+        oscClient.send(msg)
+
+        for (key, value) in faceAnchor.blendShapes {
+            let message = F53OSCMessage(addressPattern: "/" + key.rawValue, arguments: [value])
+            oscClient.send(message)
+        }
+    }
 }

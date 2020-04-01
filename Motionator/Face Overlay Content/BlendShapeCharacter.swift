@@ -47,17 +47,5 @@ class BlendShapeCharacter: NSObject, VirtualContentController {
         eyeLeftNode.scale.z = 1 - eyeBlinkLeft
         eyeRightNode.scale.z = 1 - eyeBlinkRight
         jawNode.position.y = originalJawY - jawHeight * jawOpen
-
-        let oscClient = F53OSCClient.init()
-        oscClient.host = "192.168.86.160"
-        oscClient.port = 9001
-
-        let message = F53OSCMessage(addressPattern: "/blender", arguments: [jawOpen, eyeBlinkLeft, eyeBlinkRight])
-        oscClient.send(message)
-        
-        for (key, value) in blendShapes {
-            let message = F53OSCMessage(addressPattern: "/" + key.rawValue, arguments: [value])
-            oscClient.send(message)
-        }
-     }
+    }
 }
