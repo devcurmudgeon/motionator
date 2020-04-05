@@ -9,14 +9,16 @@ import ARKit
 import SceneKit
 import UIKit
 
-class FaceCaptureView: UIViewController, ARSessionDelegate {
+class MotionatorView: UIViewController, ARSessionDelegate {
     
     // MARK: Outlets
 
-    @IBOutlet var sceneView: ARSCNView!
+    @IBOutlet var faceView: ARSCNView!
     @IBOutlet weak var tabBar: UITabBar!
 
     // MARK: Properties
+
+    // The 3D character to display.
 
     var contentControllers: [VirtualContentType: VirtualContentController] = [:]
     
@@ -30,8 +32,8 @@ class FaceCaptureView: UIViewController, ARSessionDelegate {
             
             // If there's an anchor already (switching content), get the content controller to place initial content.
             // Otherwise, the content controller will place it in `renderer(_:didAdd:for:)`.
-            if let anchor = currentFaceAnchor, let node = sceneView.node(for: anchor),
-                let newContent = selectedContentController.renderer(sceneView, nodeFor: anchor) {
+            if let anchor = currentFaceAnchor, let node = faceView.node(for: anchor),
+                let newContent = selectedContentController.renderer(faceView, nodeFor: anchor) {
                 node.addChildNode(newContent)
             }
         }
@@ -53,10 +55,10 @@ class FaceCaptureView: UIViewController, ARSessionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sceneView.delegate = self
-        sceneView.session.delegate = self
-        sceneView.automaticallyUpdatesLighting = true
-        
+        faceView.delegate = self
+        faceView.session.delegate = self
+        faceView.automaticallyUpdatesLighting = true
+
         // Set the initial face content.
         tabBar.selectedItem = tabBar.items!.first!
         selectedVirtualContent = VirtualContentType(rawValue: tabBar.selectedItem!.tag)
@@ -96,7 +98,7 @@ class FaceCaptureView: UIViewController, ARSessionDelegate {
         guard ARFaceTrackingConfiguration.isSupported else { return }
         let configuration = ARFaceTrackingConfiguration()
         configuration.isLightEstimationEnabled = true
-        sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+        faceView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }
     
     // MARK: - Error handling
@@ -113,7 +115,7 @@ class FaceCaptureView: UIViewController, ARSessionDelegate {
     }
 }
 
-extension FaceCaptureView: UITabBarDelegate {
+extension MotionatorView: UITabBarDelegate {
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         guard let contentType = VirtualContentType(rawValue: item.tag)
             else { fatalError("unexpected virtual content tag") }
@@ -121,7 +123,7 @@ extension FaceCaptureView: UITabBarDelegate {
     }
 }
 
-extension FaceCaptureView: ARSCNViewDelegate {
+extension MotionatorView: ARSCNViewDelegate {
         
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         guard let faceAnchor = anchor as? ARFaceAnchor else { return }

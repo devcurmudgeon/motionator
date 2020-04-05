@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Face Capture View-->
+        <!--Motionator View-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="FaceCaptureView" customModule="Motionator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="MotionatorView" customModule="Motionator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RLh-bf-1c3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tabBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="d27-hx-eNe">
-                                <rect key="frame" x="0.0" y="729" width="375" height="49"/>
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="tO8-2Q-yR7"/>
@@ -31,7 +31,7 @@
                                 </connections>
                             </tabBar>
                             <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E6c-py-dvH" customClass="ARSCNView">
-                                <rect key="frame" x="0.0" y="-13" width="375" height="721"/>
+                                <rect key="frame" x="0.0" y="-13" width="414" height="805"/>
                             </sceneKitView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -47,7 +47,7 @@
                         <viewLayoutGuide key="safeArea" id="GBj-4O-Whc"/>
                     </view>
                     <connections>
-                        <outlet property="sceneView" destination="E6c-py-dvH" id="Gr4-Uw-Z4A"/>
+                        <outlet property="faceView" destination="E6c-py-dvH" id="Gr4-Uw-Z4A"/>
                         <outlet property="tabBar" destination="d27-hx-eNe" id="wGk-cE-feE"/>
                     </connections>
                 </viewController>
@@ -56,21 +56,21 @@
             <point key="canvasLocation" x="56.799999999999997" y="98.275862068965523"/>
         </scene>
         <!--Unsupported View Controller-->
-        <scene sceneID="QPm-sc-AhW">
+        <scene sceneID="2Im-Af-kUj">
             <objects>
-                <viewController storyboardIdentifier="unsupportedDeviceMessage" id="Ww5-bb-kFx" userLabel="Unsupported View Controller" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nKl-Ig-Sg0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                <viewController storyboardIdentifier="unsupportedDeviceMessage" id="Va3-Ag-rvP" userLabel="Unsupported View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yMz-1Y-tvx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unsupported Device" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqL-yC-UYf">
-                                <rect key="frame" x="20" y="288" width="335" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unsupported Device" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCZ-kh-jSg">
+                                <rect key="frame" x="20" y="330" width="374" height="34"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ach-rh-boK">
-                                <rect key="frame" x="20" y="330" width="335" height="152.33333333333337"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T22-w5-Mfh">
+                                <rect key="frame" x="20" y="372" width="374" height="152.5"/>
                                 <string key="text">ARKit face tracking requires a device with a TrueDepth front-facing camera.
 
 Shipping apps must support devices without face tracking. In your app, offer UI to launch face tracking features only if the current device is supported.</string>
@@ -81,20 +81,40 @@ Shipping apps must support devices without face tracking. In your app, offer UI 
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oqL-yC-UYf" firstAttribute="centerX" secondItem="nKl-Ig-Sg0" secondAttribute="centerX" id="4XK-M5-Qld"/>
-                            <constraint firstItem="Ach-rh-boK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nKl-Ig-Sg0" secondAttribute="leading" constant="20" symbolic="YES" id="AFv-0A-dZI"/>
-                            <constraint firstItem="oqL-yC-UYf" firstAttribute="width" secondItem="Ach-rh-boK" secondAttribute="width" id="FAc-2f-dTL"/>
-                            <constraint firstItem="Ach-rh-boK" firstAttribute="centerY" secondItem="nKl-Ig-Sg0" secondAttribute="centerY" id="J2Q-vj-ifu"/>
-                            <constraint firstItem="Ach-rh-boK" firstAttribute="centerX" secondItem="nKl-Ig-Sg0" secondAttribute="centerX" id="ME0-ye-UxJ"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ach-rh-boK" secondAttribute="trailing" constant="20" symbolic="YES" id="hbq-EQ-aUs"/>
-                            <constraint firstItem="Ach-rh-boK" firstAttribute="top" secondItem="oqL-yC-UYf" secondAttribute="bottom" constant="8" symbolic="YES" id="mW3-Zk-UIb"/>
+                            <constraint firstItem="T22-w5-Mfh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yMz-1Y-tvx" secondAttribute="leading" constant="20" symbolic="YES" id="Cvx-Sc-ru1"/>
+                            <constraint firstItem="T22-w5-Mfh" firstAttribute="centerY" secondItem="yMz-1Y-tvx" secondAttribute="centerY" id="H6b-K7-96L"/>
+                            <constraint firstItem="lCZ-kh-jSg" firstAttribute="centerX" secondItem="yMz-1Y-tvx" secondAttribute="centerX" id="Z5B-Ex-clo"/>
+                            <constraint firstItem="lCZ-kh-jSg" firstAttribute="width" secondItem="T22-w5-Mfh" secondAttribute="width" id="ePr-q1-Icb"/>
+                            <constraint firstItem="T22-w5-Mfh" firstAttribute="top" secondItem="lCZ-kh-jSg" secondAttribute="bottom" constant="8" symbolic="YES" id="gg2-AJ-W7X"/>
+                            <constraint firstItem="T22-w5-Mfh" firstAttribute="centerX" secondItem="yMz-1Y-tvx" secondAttribute="centerX" id="wbO-eh-aWb"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="T22-w5-Mfh" secondAttribute="trailing" constant="20" symbolic="YES" id="yBC-ql-tEh"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="xCr-dq-97a"/>
+                        <viewLayoutGuide key="safeArea" id="fgp-VD-8oA"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="01d-4b-zAD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="imC-8o-6yF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="980" y="97.536945812807886"/>
+            <point key="canvasLocation" x="-783" y="98"/>
+        </scene>
+        <!--Body Capture-->
+        <scene sceneID="VHr-wY-Sf7">
+            <objects>
+                <viewController id="rGo-Fz-gMp" userLabel="Body Capture" customClass="MotionatorView" customModule="Motionator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="woT-ug-b1h" userLabel="Body Capture" customClass="ARView" customModule="RealityKit">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <viewLayoutGuide key="safeArea" id="3RE-64-eFD"/>
+                    </view>
+                    <connections>
+                        <outlet property="arView" destination="woT-ug-b1h" id="saV-Je-cQ1"/>
+                        <outlet property="bodyView" destination="woT-ug-b1h" id="a9I-SG-mPq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="umD-Y2-0RB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886" y="98"/>
         </scene>
     </scenes>
     <resources>

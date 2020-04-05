@@ -11,11 +11,10 @@
 		116FDD742130A6BD008404D3 /* TransformVisualization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116FDD732130A6BD008404D3 /* TransformVisualization.swift */; };
 		11EE23D2213479CF00C0DEAD /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EE23D1213479CF00C0DEAD /* Utilities.swift */; };
 		121E32A92433ACCB004F1038 /* F53OSC in Frameworks */ = {isa = PBXBuildFile; productRef = 121E32A82433ACCB004F1038 /* F53OSC */; };
-		121FB4CB24321AC20049A681 /* BodyCapture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 121FB4CA24321AC20049A681 /* BodyCapture.storyboard */; };
 		121FB4CD24321B670049A681 /* BodyCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121FB4CC24321B670049A681 /* BodyCaptureView.swift */; };
+		12719927243A0B0D00955287 /* Motionator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12719925243A0B0D00955287 /* Motionator.storyboard */; };
 		3929C48C1E89EC2C00E00B60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3929C48B1E89EC2C00E00B60 /* AppDelegate.swift */; };
-		3929C48E1E89EC2C00E00B60 /* FaceCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3929C48D1E89EC2C00E00B60 /* FaceCaptureView.swift */; };
-		3929C4911E89EC2C00E00B60 /* FaceCapture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3929C48F1E89EC2C00E00B60 /* FaceCapture.storyboard */; };
+		3929C48E1E89EC2C00E00B60 /* MotionatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3929C48D1E89EC2C00E00B60 /* MotionatorView.swift */; };
 		3929C4931E89EC2C00E00B60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3929C4921E89EC2C00E00B60 /* Assets.xcassets */; };
 		3929C49F1E89EE4400E00B60 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 3929C49E1E89EE4400E00B60 /* Models.scnassets */; };
 		39D8DC1B1E8ADAE600386B05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39D8DC1A1E8ADAE600386B05 /* LaunchScreen.storyboard */; };
@@ -28,13 +27,11 @@
 		11063F3B1EBE651B0033EE6D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		116FDD732130A6BD008404D3 /* TransformVisualization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformVisualization.swift; sourceTree = "<group>"; };
 		11EE23D1213479CF00C0DEAD /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		11F053B72130CCD2005FCAF2 /* ARFaceGeometry.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ARFaceGeometry.obj; sourceTree = "<group>"; };
-		121FB4CA24321AC20049A681 /* BodyCapture.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BodyCapture.storyboard; sourceTree = "<group>"; };
 		121FB4CC24321B670049A681 /* BodyCaptureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyCaptureView.swift; sourceTree = "<group>"; };
+		12719926243A0B0D00955287 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Motionator/Base.lproj/Motionator.storyboard; sourceTree = "<group>"; };
 		3929C4881E89EC2C00E00B60 /* Motionator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Motionator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3929C48B1E89EC2C00E00B60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3929C48D1E89EC2C00E00B60 /* FaceCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceCaptureView.swift; sourceTree = "<group>"; };
-		3929C4901E89EC2C00E00B60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FaceCapture.storyboard; sourceTree = "<group>"; };
+		3929C48D1E89EC2C00E00B60 /* MotionatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionatorView.swift; sourceTree = "<group>"; };
 		3929C4921E89EC2C00E00B60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3929C4971E89EC2C00E00B60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3929C49E1E89EE4400E00B60 /* Models.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Models.scnassets; sourceTree = "<group>"; };
@@ -60,12 +57,11 @@
 		1488324C1EFC3ED00043E0AB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				12719925243A0B0D00955287 /* Motionator.storyboard */,
 				3929C49E1E89EE4400E00B60 /* Models.scnassets */,
 				3929C4921E89EC2C00E00B60 /* Assets.xcassets */,
 				3929C4971E89EC2C00E00B60 /* Info.plist */,
-				3929C48F1E89EC2C00E00B60 /* FaceCapture.storyboard */,
 				39D8DC1A1E8ADAE600386B05 /* LaunchScreen.storyboard */,
-				121FB4CA24321AC20049A681 /* BodyCapture.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -74,7 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				11063F3B1EBE651B0033EE6D /* README.md */,
-				11F053B72130CCD2005FCAF2 /* ARFaceGeometry.obj */,
 				3929C48A1E89EC2C00E00B60 /* Motionator */,
 				3929C4891E89EC2C00E00B60 /* Products */,
 				690A3257C5246D71602E2F11 /* Configuration */,
@@ -94,7 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				3929C48B1E89EC2C00E00B60 /* AppDelegate.swift */,
-				3929C48D1E89EC2C00E00B60 /* FaceCaptureView.swift */,
+				3929C48D1E89EC2C00E00B60 /* MotionatorView.swift */,
 				121FB4CC24321B670049A681 /* BodyCaptureView.swift */,
 				C8904E581F4CFE380089E530 /* Face Overlay Content */,
 				11EE23D1213479CF00C0DEAD /* Utilities.swift */,
@@ -198,10 +193,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3929C49F1E89EE4400E00B60 /* Models.scnassets in Resources */,
-				121FB4CB24321AC20049A681 /* BodyCapture.storyboard in Resources */,
+				12719927243A0B0D00955287 /* Motionator.storyboard in Resources */,
 				39D8DC1B1E8ADAE600386B05 /* LaunchScreen.storyboard in Resources */,
 				3929C4931E89EC2C00E00B60 /* Assets.xcassets in Resources */,
-				3929C4911E89EC2C00E00B60 /* FaceCapture.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,7 +208,7 @@
 			files = (
 				116FDD742130A6BD008404D3 /* TransformVisualization.swift in Sources */,
 				11012C161F3D07BC0099F3A4 /* BlendShapeCharacter.swift in Sources */,
-				3929C48E1E89EC2C00E00B60 /* FaceCaptureView.swift in Sources */,
+				3929C48E1E89EC2C00E00B60 /* MotionatorView.swift in Sources */,
 				3929C48C1E89EC2C00E00B60 /* AppDelegate.swift in Sources */,
 				C8904E551F4CFD000089E530 /* VirtualContent.swift in Sources */,
 				11EE23D2213479CF00C0DEAD /* Utilities.swift in Sources */,
@@ -226,13 +220,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3929C48F1E89EC2C00E00B60 /* FaceCapture.storyboard */ = {
+		12719925243A0B0D00955287 /* Motionator.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3929C4901E89EC2C00E00B60 /* Base */,
+				12719926243A0B0D00955287 /* Base */,
 			);
-			name = FaceCapture.storyboard;
-			path = ..;
+			name = Motionator.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
