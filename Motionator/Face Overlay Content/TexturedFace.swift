@@ -53,17 +53,20 @@ class TexturedFace: NSObject, VirtualContentController {
         faceNode.setWorldTransform(faceMatrix)
         let euler = faceNode.eulerAngles
 
+        let defaults = UserDefaults.standard
+
         let oscClient = F53OSCClient.init()
-        oscClient.host = "192.168.86.160"
-        oscClient.port = 9001
+        oscClient.host = defaults.string(forKey: "oscAddress")
+        oscClient.port = UInt16(defaults.integer(forKey: "oscPort"))
 
-
-        let msg = F53OSCMessage(addressPattern: "/head", arguments: [euler.x, 3.14 - euler.z, euler.y])
+        let msg = F53OSCMessage(addressPattern: "/head", arguments: [euler.x, 3.14 - euler.z, euler.y]) 
         oscClient.send(msg)
+        print(msg)
 
         for (key, value) in faceAnchor.blendShapes {
             let message = F53OSCMessage(addressPattern: "/" + key.rawValue, arguments: [value])
             oscClient.send(message)
+            print(message)
         }
     }
 }

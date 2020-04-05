@@ -12,6 +12,7 @@
 		11EE23D2213479CF00C0DEAD /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EE23D1213479CF00C0DEAD /* Utilities.swift */; };
 		121E32A92433ACCB004F1038 /* F53OSC in Frameworks */ = {isa = PBXBuildFile; productRef = 121E32A82433ACCB004F1038 /* F53OSC */; };
 		121FB4CD24321B670049A681 /* BodyCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121FB4CC24321B670049A681 /* BodyCaptureView.swift */; };
+		126EF615243A64DE003E94D4 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 126EF614243A64DE003E94D4 /* Settings.bundle */; };
 		12719927243A0B0D00955287 /* Motionator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12719925243A0B0D00955287 /* Motionator.storyboard */; };
 		3929C48C1E89EC2C00E00B60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3929C48B1E89EC2C00E00B60 /* AppDelegate.swift */; };
 		3929C48E1E89EC2C00E00B60 /* MotionatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3929C48D1E89EC2C00E00B60 /* MotionatorView.swift */; };
@@ -28,6 +29,7 @@
 		116FDD732130A6BD008404D3 /* TransformVisualization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformVisualization.swift; sourceTree = "<group>"; };
 		11EE23D1213479CF00C0DEAD /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		121FB4CC24321B670049A681 /* BodyCaptureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyCaptureView.swift; sourceTree = "<group>"; };
+		126EF614243A64DE003E94D4 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = Motionator/Settings.bundle; sourceTree = SOURCE_ROOT; };
 		12719926243A0B0D00955287 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Motionator/Base.lproj/Motionator.storyboard; sourceTree = "<group>"; };
 		3929C4881E89EC2C00E00B60 /* Motionator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Motionator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3929C48B1E89EC2C00E00B60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				C8904E541F4CFD000089E530 /* VirtualContent.swift */,
 				116FDD732130A6BD008404D3 /* TransformVisualization.swift */,
 				C8904E561F4CFD730089E530 /* TexturedFace.swift */,
+				126EF614243A64DE003E94D4 /* Settings.bundle */,
 				11012C151F3D07BC0099F3A4 /* BlendShapeCharacter.swift */,
 			);
 			path = "Face Overlay Content";
@@ -194,6 +197,7 @@
 			files = (
 				3929C49F1E89EE4400E00B60 /* Models.scnassets in Resources */,
 				12719927243A0B0D00955287 /* Motionator.storyboard in Resources */,
+				126EF615243A64DE003E94D4 /* Settings.bundle in Resources */,
 				39D8DC1B1E8ADAE600386B05 /* LaunchScreen.storyboard in Resources */,
 				3929C4931E89EC2C00E00B60 /* Assets.xcassets in Resources */,
 			);
