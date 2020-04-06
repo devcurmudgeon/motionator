@@ -7,9 +7,10 @@ sample, hooked up with [Figure 53's OSC library](https://github.com/Figure53/F53
 
 For OSC support in Blender, JPfeP's [Addroutes addon](http://www.jpfep.net/pages/addroutes/) is just the thing :-)
 
-Motionator sends one message for head orientation
+Motionator sends two  messages for head orientation
 ```
-/head x, y, z
+/ht              # x, y, z translation
+/hr              # r, p, y euler angles rotation
 ```
 and a float value for all of the Apple blendShapes
 
